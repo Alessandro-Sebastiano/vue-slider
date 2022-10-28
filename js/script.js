@@ -51,8 +51,22 @@ const app = createApp({
 
         clickedSLide(i) {
             this.activeSlide = i;
-        }
+        },
 
+
+        autoSlide() {
+            setInterval(() => {
+                this.nextSlide();
+            }, 3000);
+        },
+
+
+    },
+
+
+
+    mounted() {
+        this.autoSlide();
     }
 
 })
